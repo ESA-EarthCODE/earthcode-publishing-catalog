@@ -1,0 +1,64 @@
+{
+  "type": "Collection",
+  "id": "test",
+  "stac_version": "1.1.0",
+  "description": "TEST Description",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "EarthCODE Catalog"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "TEST"
+    }
+  ],
+  "thumbnail": "https://raw.githubusercontent.com/ESA-EarthCODE/publishing-catalog/main/assets/test.png",
+  "themes": [
+    "Firn"
+  ],
+  "endpointtype": "Collection-only",
+  "title": "TEST",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2026-02-20T10:56:42.077399Z",
+          null
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "assets": {
+    "thumbnail": {
+      "href": "https://raw.githubusercontent.com/ESA-EarthCODE/publishing-catalog/main/assets/test.png",
+      "type": "image/png",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "reference_1": {
+      "href": "https://example.com",
+      "type": "text/html",
+      "title": "Link",
+      "roles": [
+        "metadata"
+      ]
+    }
+  }
+}
