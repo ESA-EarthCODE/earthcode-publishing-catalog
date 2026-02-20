@@ -1,0 +1,20 @@
+{
+  "Name": "test",
+  "Title": "TEST",
+  "Description": "TEST Description",
+  "Themes": [
+    "Firn"
+  ],
+  "References": [
+    {
+      "Name": "Link",
+      "Url": "https://example.com"
+    }
+  ],
+  "Image": "test.png",
+  "Resources": [
+    {
+      "Name": "Collection-only"
+    }
+  ]
+}
