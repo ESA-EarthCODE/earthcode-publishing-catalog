@@ -1,0 +1,13 @@
+{
+  "Name": "demo",
+  "Title": "Demo",
+  "Description": "",
+  "Resources": [
+    {
+      "Name": "WMS",
+      "EndPoint": "",
+      "LayerId": "",
+      "Type": "OverwriteTimes"
+    }
+  ]
+}
