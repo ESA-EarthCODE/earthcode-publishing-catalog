@@ -19,6 +19,9 @@
       "id": "test",
       "themes": [
         "Firn"
+      ],
+      "thumbnail": [
+        "https://raw.githubusercontent.com/ESA-EarthCODE/publishing-catalog/main/assets/test.png"
       ]
     },
     {
@@ -95,8 +98,8 @@
     "temporal": {
       "interval": [
         [
-          "2026-02-23T08:41:11.549548Z",
-          "2026-02-23T08:41:11.549548Z"
+          "2026-05-28T09:57:10.422080Z",
+          "2026-05-28T09:57:10.422080Z"
         ]
       ]
     }
