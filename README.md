@@ -8,4 +8,4 @@ Catalog is available under:
 
 Using STAC browser, e.g.:
 
-[https://radiantearth.github.io/stac-browser/#/external/ESA-EarthCODE.github.io/earthcode-publishing-catalog/earthcode/catalog.json](https://radiantearth.github.io/stac-browser/#/external/ESA-EarthCODE.github.io/earthcode-publishing-catalog/earthcode/catalog.json)
+[https://browser.moregeo.it/external/ESA-EarthCODE.github.io/earthcode-publishing-catalog/earthcode/catalog.json](https://browser.moregeo.it/external/ESA-EarthCODE.github.io/earthcode-publishing-catalog/earthcode/catalog.json)
