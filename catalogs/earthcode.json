@@ -7,6 +7,7 @@
   "default_overlay_layers": "layers/overlays",
   "assets_endpoint": "https://raw.githubusercontent.com/ESA-EarthCODE/publishing-catalog/main/assets",
   "collections": [
-    "test"
+    "test",
+    "demo"
   ]
 }
