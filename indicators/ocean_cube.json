@@ -13,10 +13,10 @@
     }
   ],
   "Collections": [
-    "ocean_med_daily_surface",
     "ocean_med_monthly",
     "ocean_med_biophysics",
-    "ocean_med_hourly"
+    "ocean_med_hourly",
+    "ocean_med_daily_surface"
   ],
   "Disable": [
     "ocean_med_monthly",
