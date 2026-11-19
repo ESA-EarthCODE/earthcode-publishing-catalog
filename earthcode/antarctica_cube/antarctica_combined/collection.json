@@ -1,0 +1,472 @@
+{
+  "type": "Collection",
+  "id": "antarctica_combined",
+  "stac_version": "1.1.0",
+  "description": "Antarctica Combined Land-Ice GeoZarr datacube in EPSG:3031, containing bedrock topography, ice thickness, surface elevation, firn air content, geoid height, and grounding-line masks.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "EarthCODE Catalog"
+    },
+    {
+      "rel": "style",
+      "href": "https://raw.githubusercontent.com/ESA-EarthCODE/earthcode-publishing-catalog/main/assets/geozarr_style.json",
+      "type": "text/zarr-styles",
+      "asset:keys": [
+        "antarctica_combined"
+      ]
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "ESA Antarctica Datacube"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/datacube/v2.2.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "cube:dimensions": {
+    "y": {
+      "type": "spatial",
+      "axis": "y",
+      "extent": [
+        -2457900.0,
+        2457900.0
+      ]
+    },
+    "x": {
+      "type": "spatial",
+      "axis": "x",
+      "extent": [
+        -2867900.0,
+        2867900.0
+      ]
+    }
+  },
+  "cube:variables": {
+    "bed": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Bedrock topography"
+    },
+    "dataid": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Bed-elevation input-data identifier"
+    },
+    "errbed": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Bed topography and ice-thickness error"
+    },
+    "firn": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Firn air content"
+    },
+    "geoid": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "EIGEN-6C4 geoid height above the WGS 84 ellipsoid"
+    },
+    "groundlines_date1": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "days since 1992-02-07 00:00:00",
+      "description": "Grounding-line acquisition date 1"
+    },
+    "groundlines_date2": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "days since 1992-02-07 00:00:00",
+      "description": "Grounding-line acquisition date 2"
+    },
+    "groundlines_date3": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "days since 1992-02-07 00:00:00",
+      "description": "Grounding-line acquisition date 3"
+    },
+    "groundlines_date4": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "days since 1992-02-07 00:00:00",
+      "description": "Grounding-line acquisition date 4"
+    },
+    "groundlines_mask": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Grounding-line presence mask"
+    },
+    "groundlines_orbit1": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Grounding-line sensor orbit identifier (acquisition 1)"
+    },
+    "groundlines_orbit2": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Grounding-line sensor orbit identifier (acquisition 2)"
+    },
+    "groundlines_orbit3": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Grounding-line sensor orbit identifier (acquisition 3)"
+    },
+    "groundlines_orbit4": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Grounding-line sensor orbit identifier (acquisition 4)"
+    },
+    "groundlines_sensor": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Grounding-line sensor identifier"
+    },
+    "ice_shelf_basal_melt_rate": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "m year-1",
+      "description": "Antarctic ice-shelf basal melt rate"
+    },
+    "mask": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Ocean, ice, and land classification"
+    },
+    "rgi": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Randolph Glacier Inventory outline mask"
+    },
+    "source": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Bed-elevation method identifier"
+    },
+    "subglacial_lakes_extents_mask": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Subglacial lake identifier mask"
+    },
+    "supra_glacial_lakes_a_p_ratio": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Supraglacial lake area-to-perimeter ratio"
+    },
+    "supra_glacial_lakes_bedrock": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Distance from supraglacial feature to exposed bedrock"
+    },
+    "supra_glacial_lakes_coast": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Distance from supraglacial feature to ice margin or coastline"
+    },
+    "supra_glacial_lakes_elevation": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Ice-surface elevation at supraglacial feature centroid"
+    },
+    "supra_glacial_lakes_feature_cl": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Supraglacial lake feature class"
+    },
+    "supra_glacial_lakes_fractal": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Supraglacial feature fractal-dimension index"
+    },
+    "supra_glacial_lakes_gl": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Signed distance from supraglacial feature to grounding line"
+    },
+    "supra_glacial_lakes_gl_on_is": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Grounding-line distance on the ice-shelf side"
+    },
+    "supra_glacial_lakes_ipq": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Supraglacial feature isoperimetric quotient"
+    },
+    "supra_glacial_lakes_location": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Supraglacial lake location class"
+    },
+    "supra_glacial_lakes_mask": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Supraglacial lakes and channels maximum extent (January 2017)"
+    },
+    "supra_glacial_lakes_rema_max": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Maximum REMA elevation within supraglacial feature"
+    },
+    "supra_glacial_lakes_rema_min": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Minimum REMA elevation within supraglacial feature"
+    },
+    "supra_glacial_lakes_reock": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Supraglacial feature Reock compactness index"
+    },
+    "supra_glacial_lakes_schwartzbe": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Supraglacial feature Schwartzberg compactness index"
+    },
+    "supra_glacial_lakes_slope": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "degree",
+      "description": "Ice-surface slope at supraglacial feature centroid"
+    },
+    "supra_glacial_lakes_speed": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "m year-1",
+      "description": "Ice-surface speed at supraglacial feature centroid"
+    },
+    "supra_glacial_lakes_w_l_ratio": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Supraglacial feature width-to-length ratio"
+    },
+    "surface": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Ice surface elevation"
+    },
+    "thickness": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Land-ice thickness"
+    }
+  },
+  "subtitle": "Bedrock topography, ice thickness, firn, geoid, and grounding lines",
+  "themes": [
+    "Cryosphere"
+  ],
+  "tags": [
+    "antarctica",
+    "land-ice",
+    "bedrock",
+    "thickness",
+    "geozarr",
+    "datacube"
+  ],
+  "agency": [
+    "ESA"
+  ],
+  "subcode": "ANTARCTICA_COMBINED",
+  "eodash:proj4_def": {
+    "name": "EPSG:3031",
+    "def": "+proj=stere +lat_0=-90 +lat_ts=-71 +lon_0=0 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs +type=crs",
+    "bounds": [
+      -3299207.53,
+      -3333134.03,
+      3299207.53,
+      3333134.03
+    ]
+  },
+  "endpointtype": "GeoZarr source",
+  "title": "Antarctica Combined Bed & Ice Sheet Properties",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -90.0,
+          180.0,
+          -60.0
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2020-01-01T00:00:00Z",
+          "2020-01-01T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "assets": {
+    "geoparquet": {
+      "href": "./items.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "GeoParquet Items",
+      "file:size": 162499,
+      "roles": [
+        "collection-mirror"
+      ]
+    }
+  }
+}

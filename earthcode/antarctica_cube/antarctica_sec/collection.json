@@ -1,0 +1,184 @@
+{
+  "type": "Collection",
+  "id": "antarctica_sec",
+  "stac_version": "1.1.0",
+  "description": "Antarctic Ice Sheet Surface Elevation Change Rate (SEC) GeoZarr datacube in EPSG:3031, including elevation change rate, uncertainty, surface type classification, and IMBIE basin identifiers.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "EarthCODE Catalog"
+    },
+    {
+      "rel": "style",
+      "href": "https://raw.githubusercontent.com/ESA-EarthCODE/earthcode-publishing-catalog/main/assets/geozarr_style.json",
+      "type": "text/zarr-styles",
+      "asset:keys": [
+        "antarctica_sec"
+      ]
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "ESA Antarctica Datacube"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/datacube/v2.2.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "cube:dimensions": {
+    "y": {
+      "type": "spatial",
+      "axis": "y",
+      "extent": [
+        -2457900.0,
+        2457900.0
+      ]
+    },
+    "x": {
+      "type": "spatial",
+      "axis": "x",
+      "extent": [
+        -2867900.0,
+        2867900.0
+      ]
+    },
+    "time": {
+      "type": "temporal",
+      "unit": "days since 1993-12-01 00:00:00"
+    }
+  },
+  "cube:variables": {
+    "basin_id": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "IMBIE Glaciological Basin Identifier"
+    },
+    "cell_end_times": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "years",
+      "description": "Last observation time in SEC grid cell"
+    },
+    "cell_start_times": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "years",
+      "description": "First observation time in SEC grid cell"
+    },
+    "cell_time_lengths": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "years",
+      "description": "Observation period covered by SEC grid cell"
+    },
+    "sec": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m/yr",
+      "description": "Antarctic Ice Sheet Surface Elevation Change Rate"
+    },
+    "sec_uncertainty": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m/yr",
+      "description": "Uncertainty in Antarctic Ice Sheet Surface Elevation Change Rate"
+    },
+    "surface_type": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Antarctic Surface Type Classification"
+    }
+  },
+  "subtitle": "Antarctic ice sheet surface elevation change rate over 27 time steps",
+  "themes": [
+    "Cryosphere"
+  ],
+  "tags": [
+    "antarctica",
+    "land-ice",
+    "elevation",
+    "sec",
+    "geozarr",
+    "datacube"
+  ],
+  "agency": [
+    "ESA"
+  ],
+  "subcode": "ANTARCTICA_SEC",
+  "eodash:proj4_def": {
+    "name": "EPSG:3031",
+    "def": "+proj=stere +lat_0=-90 +lat_ts=-71 +lon_0=0 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs +type=crs",
+    "bounds": [
+      -3299207.53,
+      -3333134.03,
+      3299207.53,
+      3333134.03
+    ]
+  },
+  "endpointtype": "GeoZarr source",
+  "title": "Antarctic Surface Elevation Change (SEC) Cube",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -90.0,
+          180.0,
+          -60.0
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2020-01-01T00:00:00Z",
+          "2020-01-01T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "assets": {
+    "geoparquet": {
+      "href": "./items.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "GeoParquet Items",
+      "file:size": 49549,
+      "roles": [
+        "collection-mirror"
+      ]
+    }
+  }
+}

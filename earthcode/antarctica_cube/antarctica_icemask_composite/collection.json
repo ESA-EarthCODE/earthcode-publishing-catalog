@@ -1,0 +1,125 @@
+{
+  "type": "Collection",
+  "id": "antarctica_icemask_composite",
+  "stac_version": "1.1.0",
+  "description": "Composite Antarctic Ice Mask GeoZarr datacube (1997-2021, 24 time steps) in EPSG:3031.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "EarthCODE Catalog"
+    },
+    {
+      "rel": "style",
+      "href": "https://raw.githubusercontent.com/ESA-EarthCODE/earthcode-publishing-catalog/main/assets/geozarr_style.json",
+      "type": "text/zarr-styles",
+      "asset:keys": [
+        "antarctica_icemask_composite"
+      ]
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "ESA Antarctica Datacube"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/datacube/v2.2.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "cube:dimensions": {
+    "time": {
+      "type": "temporal",
+      "unit": "days since 1997-10-01 00:00:00"
+    },
+    "y": {
+      "type": "spatial",
+      "axis": "y",
+      "extent": [
+        -2457900.0,
+        2457900.0
+      ]
+    },
+    "x": {
+      "type": "spatial",
+      "axis": "x",
+      "extent": [
+        -2867900.0,
+        2867900.0
+      ]
+    }
+  },
+  "cube:variables": {
+    "icemask_composite": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Composite Antarctic Ice Mask, 1997-2021"
+    }
+  },
+  "subtitle": "Multi-temporal composite Antarctic ice-front mask",
+  "themes": [
+    "Cryosphere"
+  ],
+  "tags": [
+    "antarctica",
+    "land-ice",
+    "icemask",
+    "geozarr",
+    "datacube"
+  ],
+  "agency": [
+    "ESA"
+  ],
+  "subcode": "ANTARCTICA_ICEMASK",
+  "eodash:proj4_def": {
+    "name": "EPSG:3031",
+    "def": "+proj=stere +lat_0=-90 +lat_ts=-71 +lon_0=0 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs +type=crs",
+    "bounds": [
+      -3299207.53,
+      -3333134.03,
+      3299207.53,
+      3333134.03
+    ]
+  },
+  "endpointtype": "GeoZarr source",
+  "title": "Composite Antarctic Ice Mask (1997-2021)",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -90.0,
+          180.0,
+          -60.0
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2020-01-01T00:00:00Z",
+          "2020-01-01T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "assets": {
+    "geoparquet": {
+      "href": "./items.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "GeoParquet Items",
+      "file:size": 29559,
+      "roles": [
+        "collection-mirror"
+      ]
+    }
+  }
+}

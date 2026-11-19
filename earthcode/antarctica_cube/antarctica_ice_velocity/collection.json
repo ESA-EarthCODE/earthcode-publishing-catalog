@@ -1,0 +1,185 @@
+{
+  "type": "Collection",
+  "id": "antarctica_ice_velocity",
+  "stac_version": "1.1.0",
+  "description": "Antarctic Land-Ice Surface Velocity GeoZarr datacube in EPSG:3031 (87 time steps), including horizontal velocity magnitude, easting/northing/vertical velocity components, standard deviations, and measurement counts.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "EarthCODE Catalog"
+    },
+    {
+      "rel": "style",
+      "href": "https://raw.githubusercontent.com/ESA-EarthCODE/earthcode-publishing-catalog/main/assets/geozarr_style.json",
+      "type": "text/zarr-styles",
+      "asset:keys": [
+        "antarctica_ice_velocity"
+      ]
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "ESA Antarctica Datacube"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/datacube/v2.2.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "cube:dimensions": {
+    "time": {
+      "type": "temporal",
+      "unit": "days since 2014-10-01 00:00:00"
+    },
+    "y": {
+      "type": "spatial",
+      "axis": "y",
+      "extent": [
+        -2457900.0,
+        2457900.0
+      ]
+    },
+    "x": {
+      "type": "spatial",
+      "axis": "x",
+      "extent": [
+        -2867900.0,
+        2867900.0
+      ]
+    }
+  },
+  "cube:variables": {
+    "land_ice_surface_easting_stddev": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m/day",
+      "description": "Land ice surface easting velocity standard deviation"
+    },
+    "land_ice_surface_easting_velocity": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m/day",
+      "description": "Land ice surface easting velocity"
+    },
+    "land_ice_surface_measurement_count": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Land ice surface valid measurement count"
+    },
+    "land_ice_surface_northing_stddev": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m/day",
+      "description": "Land ice surface northing velocity standard deviation"
+    },
+    "land_ice_surface_northing_velocity": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m/day",
+      "description": "Land ice surface northing velocity"
+    },
+    "land_ice_surface_velocity_magnitude": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m/day",
+      "description": "Land ice surface horizontal velocity magnitude"
+    },
+    "land_ice_surface_vertical_velocity": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m/day",
+      "description": "Land ice surface vertical velocity"
+    }
+  },
+  "subtitle": "Antarctic land-ice surface velocity magnitude and components",
+  "themes": [
+    "Cryosphere"
+  ],
+  "tags": [
+    "antarctica",
+    "land-ice",
+    "velocity",
+    "geozarr",
+    "datacube"
+  ],
+  "agency": [
+    "ESA"
+  ],
+  "subcode": "ANTARCTICA_ICE_VELOCITY",
+  "eodash:proj4_def": {
+    "name": "EPSG:3031",
+    "def": "+proj=stere +lat_0=-90 +lat_ts=-71 +lon_0=0 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs +type=crs",
+    "bounds": [
+      -3299207.53,
+      -3333134.03,
+      3299207.53,
+      3333134.03
+    ]
+  },
+  "endpointtype": "GeoZarr source",
+  "title": "Antarctic Land-Ice Surface Velocity Cube",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -90.0,
+          180.0,
+          -60.0
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2020-01-01T00:00:00Z",
+          "2020-01-01T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "assets": {
+    "geoparquet": {
+      "href": "./items.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "GeoParquet Items",
+      "file:size": 51807,
+      "roles": [
+        "collection-mirror"
+      ]
+    }
+  }
+}

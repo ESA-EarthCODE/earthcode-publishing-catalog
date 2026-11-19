@@ -12,20 +12,77 @@
     },
     {
       "rel": "child",
-      "href": "./test/collection.json",
+      "href": "./ocean_cube/collection.json",
       "type": "application/json",
-      "title": "TEST",
-      "id": "test",
+      "title": "ESA Mediterranean Sea Datacube",
+      "id": "ocean_cube",
       "themes": [
-        "Firn"
+        "oceans"
+      ],
+      "subcode": [
+        "OCEAN_MED_DAILY",
+        "OCEAN_MED_BIO",
+        "OCEAN_MED_HOURLY",
+        "OCEAN_MED_MONTHLY"
       ],
       "thumbnail": [
-        "https://raw.githubusercontent.com/ESA-EarthCODE/publishing-catalog/main/assets/test.png"
+        "https://raw.githubusercontent.com/ESA-EarthCODE/earthcode-publishing-catalog/main/assets/ocean-cube-thumbnail.png"
+      ],
+      "tags": [
+        "ocean",
+        "mediterranean",
+        "geozarr",
+        "datacube"
+      ],
+      "agency": [
+        "ESA"
       ]
     },
     {
+      "rel": "child",
+      "href": "./antarctica_cube/collection.json",
+      "type": "application/json",
+      "title": "ESA Antarctica Datacube",
+      "id": "antarctica_cube",
+      "themes": [
+        "cryosphere"
+      ],
+      "subcode": [
+        "ANTARCTICA_SEC",
+        "ANTARCTICA_SEA_ICE",
+        "ANTARCTICA_ICE_TEMP",
+        "ANTARCTICA_ICEMASK",
+        "ANTARCTICA_ICE_VELOCITY",
+        "ANTARCTICA_COMBINED"
+      ],
+      "thumbnail": [
+        "https://raw.githubusercontent.com/ESA-EarthCODE/polar_hackathon/refs/heads/main/static/polar-cube-viz.jpeg"
+      ],
+      "tags": [
+        "antarctica",
+        "polar",
+        "land-ice",
+        "sea-ice",
+        "geozarr",
+        "datacube"
+      ],
+      "agency": [
+        "ESA"
+      ],
+      "eodash:mapProjection": {
+        "name": "EPSG:3031",
+        "def": "+proj=stere +lat_0=-90 +lat_ts=-71 +lon_0=0 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs +type=crs",
+        "bounds": [
+          -3299207.53,
+          -3333134.03,
+          3299207.53,
+          3333134.03
+        ]
+      }
+    },
+    {
       "rel": "self",
-      "href": "https://ESA-EarthCODE.github.io/publishing-catalog/earthcode/catalog.json",
+      "href": "https://ESA-EarthCODE.github.io/earthcode-publishing-catalog/earthcode/catalog.json",
       "type": "application/json"
     }
   ],

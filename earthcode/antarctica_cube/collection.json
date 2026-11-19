@@ -1,0 +1,337 @@
+{
+  "type": "Collection",
+  "id": "antarctica_cube",
+  "stac_version": "1.1.0",
+  "description": "Collection of Antarctic land-ice and sea-ice GeoZarr datacubes from the EarthCODE Polar Hackathon, including internal ice temperature, surface elevation change, combined bed/ice properties, composite ice mask, surface velocity, and sea-ice properties.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "EarthCODE Catalog"
+    },
+    {
+      "rel": "child",
+      "href": "./antarctica_ice_temp/collection.json",
+      "type": "application/json",
+      "title": "Antarctic Land-Ice Internal Temperature Cube",
+      "endpointtype": "GeoZarr source",
+      "subtitle": "3D Antarctic ice sheet internal temperature across 91 depth levels",
+      "code": "ANTARCTICA_ICE_TEMP",
+      "id": "antarctica_ice_temp",
+      "themes": [
+        "Cryosphere"
+      ],
+      "roles": [
+        "disable"
+      ],
+      "tags": [
+        "antarctica",
+        "land-ice",
+        "temperature",
+        "depth",
+        "geozarr",
+        "datacube"
+      ],
+      "agency": [
+        "ESA"
+      ],
+      "subcode": "ANTARCTICA_ICE_TEMP"
+    },
+    {
+      "rel": "child",
+      "href": "./antarctica_sec/collection.json",
+      "type": "application/json",
+      "title": "Antarctic Surface Elevation Change (SEC) Cube",
+      "endpointtype": "GeoZarr source",
+      "subtitle": "Antarctic ice sheet surface elevation change rate over 27 time steps",
+      "code": "ANTARCTICA_SEC",
+      "id": "antarctica_sec",
+      "themes": [
+        "Cryosphere"
+      ],
+      "roles": [
+        "disable"
+      ],
+      "tags": [
+        "antarctica",
+        "land-ice",
+        "elevation",
+        "sec",
+        "geozarr",
+        "datacube"
+      ],
+      "agency": [
+        "ESA"
+      ],
+      "subcode": "ANTARCTICA_SEC"
+    },
+    {
+      "rel": "child",
+      "href": "./antarctica_icemask_composite/collection.json",
+      "type": "application/json",
+      "title": "Composite Antarctic Ice Mask (1997-2021)",
+      "endpointtype": "GeoZarr source",
+      "subtitle": "Multi-temporal composite Antarctic ice-front mask",
+      "code": "ANTARCTICA_ICEMASK",
+      "id": "antarctica_icemask_composite",
+      "themes": [
+        "Cryosphere"
+      ],
+      "roles": [
+        "disable"
+      ],
+      "tags": [
+        "antarctica",
+        "land-ice",
+        "icemask",
+        "geozarr",
+        "datacube"
+      ],
+      "agency": [
+        "ESA"
+      ],
+      "subcode": "ANTARCTICA_ICEMASK"
+    },
+    {
+      "rel": "child",
+      "href": "./antarctica_ice_velocity/collection.json",
+      "type": "application/json",
+      "title": "Antarctic Land-Ice Surface Velocity Cube",
+      "endpointtype": "GeoZarr source",
+      "subtitle": "Antarctic land-ice surface velocity magnitude and components",
+      "code": "ANTARCTICA_ICE_VELOCITY",
+      "id": "antarctica_ice_velocity",
+      "themes": [
+        "Cryosphere"
+      ],
+      "roles": [
+        "disable"
+      ],
+      "tags": [
+        "antarctica",
+        "land-ice",
+        "velocity",
+        "geozarr",
+        "datacube"
+      ],
+      "agency": [
+        "ESA"
+      ],
+      "subcode": "ANTARCTICA_ICE_VELOCITY"
+    },
+    {
+      "rel": "child",
+      "href": "./antarctica_sea_ice/collection.json",
+      "type": "application/json",
+      "title": "Antarctic Sea-Ice Cube",
+      "endpointtype": "GeoZarr source",
+      "subtitle": "Antarctic sea-ice thickness, freeboard, floe density, and snow depth",
+      "code": "ANTARCTICA_SEA_ICE",
+      "id": "antarctica_sea_ice",
+      "themes": [
+        "Cryosphere"
+      ],
+      "roles": [
+        "disable"
+      ],
+      "tags": [
+        "antarctica",
+        "sea-ice",
+        "freeboard",
+        "geozarr",
+        "datacube"
+      ],
+      "agency": [
+        "ESA"
+      ],
+      "subcode": "ANTARCTICA_SEA_ICE"
+    },
+    {
+      "rel": "child",
+      "href": "./antarctica_combined/collection.json",
+      "type": "application/json",
+      "title": "Antarctica Combined Bed & Ice Sheet Properties",
+      "endpointtype": "GeoZarr source",
+      "subtitle": "Bedrock topography, ice thickness, firn, geoid, and grounding lines",
+      "code": "ANTARCTICA_COMBINED",
+      "id": "antarctica_combined",
+      "themes": [
+        "Cryosphere"
+      ],
+      "tags": [
+        "antarctica",
+        "land-ice",
+        "bedrock",
+        "thickness",
+        "geozarr",
+        "datacube"
+      ],
+      "agency": [
+        "ESA"
+      ],
+      "subcode": "ANTARCTICA_COMBINED"
+    },
+    {
+      "rel": "xyz",
+      "href": "https://s2maps-tiles.eu/wmts/1.0.0/s2cloudless-2025_3857/default/g/{z}/{y}/{x}.jpeg",
+      "type": "image/jpeg",
+      "title": "EOxCloudless 2025",
+      "roles": [
+        "baselayer",
+        "invisible"
+      ],
+      "id": "cloudless-2025",
+      "attribution": "{ EOxCloudless 2025: <a xmlns:dct=\"http://purl.org/dc/terms/\" href=\"https://s2maps.eu\" target=\"_blank\" property=\"dct:title\">Sentinel-2 cloudless - s2maps.eu</a> by <a xmlns:cc=\"http://creativecommons.org/ns#\" href=\"//eox.at\" target=\"_blank\" property=\"cc:attributionName\" rel=\"cc:attributionURL\">EOX IT Services GmbH</a> (Contains modified Copernicus Sentinel data 2025) }"
+    },
+    {
+      "rel": "xyz",
+      "href": "https://s2maps-tiles.eu/wmts/1.0.0/osm_3857/default/g/{z}/{y}/{x}.jpeg",
+      "type": "image/jpeg",
+      "title": "OSM Background",
+      "roles": [
+        "baselayer",
+        "invisible"
+      ],
+      "id": "OSM",
+      "attribution": "{ OSM: Data &copy; <a href=\"http://www.openstreetmap.org/copyright\" target=\"_blank\">OpenStreetMap</a> contributors and <a href=\"//maps.eox.at/#data\" target=\"_blank\">others</a>, Rendering &copy; <a href=\"http://eox.at\" target=\"_blank\">EOX</a> }"
+    },
+    {
+      "rel": "xyz",
+      "href": "https://s2maps-tiles.eu/wmts/1.0.0/terrain-light_3857/default/g/{z}/{y}/{x}.jpeg",
+      "type": "image/jpeg",
+      "title": "Terrain Light",
+      "roles": [
+        "baselayer",
+        "visible"
+      ],
+      "id": "terrain-light",
+      "attribution": "{ OSM: Data &copy; <a href=\"http://www.openstreetmap.org/copyright\" target=\"_blank\">OpenStreetMap</a> contributors and <a href=\"https://maps.eox.at/#data\" target=\"_blank\">others</a>, Rendering &copy; <a href=\"http://eox.at\" target=\"_blank\">EOX</a> }"
+    },
+    {
+      "rel": "xyz",
+      "href": "https://s2maps-tiles.eu/wmts/1.0.0/overlay_base_bright_3857/default/g/{z}/{y}/{x}.png",
+      "type": "image/png",
+      "title": "Overlay labels",
+      "roles": [
+        "overlay",
+        "visible"
+      ],
+      "id": "overlay_bright",
+      "attribution": "{ Overlay: Data &copy; <a href=\"http://www.openstreetmap.org/copyright\" target=\"_blank\">OpenStreetMap</a> contributors, Made with Natural Earth, Rendering &copy; <a href=\"https://eox.at\" target=\"_blank\">EOX</a> }"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "EarthCODE Catalog"
+    }
+  ],
+  "thumbnail": "https://raw.githubusercontent.com/ESA-EarthCODE/polar_hackathon/refs/heads/main/static/polar-cube-viz.jpeg",
+  "themes": [
+    "cryosphere"
+  ],
+  "tags": [
+    "antarctica",
+    "polar",
+    "land-ice",
+    "sea-ice",
+    "geozarr",
+    "datacube"
+  ],
+  "agency": [
+    "ESA"
+  ],
+  "eodash:mapProjection": {
+    "name": "EPSG:3031",
+    "def": "+proj=stere +lat_0=-90 +lat_ts=-71 +lon_0=0 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs +type=crs",
+    "bounds": [
+      -3299207.53,
+      -3333134.03,
+      3299207.53,
+      3333134.03
+    ]
+  },
+  "title": "ESA Antarctica Datacube",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -90.0,
+          180.0,
+          -50.0
+        ],
+        [
+          -180.0,
+          -90.0,
+          180.0,
+          -60.0
+        ],
+        [
+          -180.0,
+          -90.0,
+          180.0,
+          -60.0
+        ],
+        [
+          -180.0,
+          -90.0,
+          180.0,
+          -60.0
+        ],
+        [
+          -180.0,
+          -90.0,
+          180.0,
+          -60.0
+        ],
+        [
+          -180.0,
+          -90.0,
+          180.0,
+          -60.0
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2020-01-01T00:00:00Z",
+          "2020-01-01T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "summaries": {
+    "subcode": [
+      "ANTARCTICA_SEC",
+      "ANTARCTICA_SEA_ICE",
+      "ANTARCTICA_ICE_TEMP",
+      "ANTARCTICA_ICEMASK",
+      "ANTARCTICA_ICE_VELOCITY",
+      "ANTARCTICA_COMBINED"
+    ],
+    "themes": [
+      "Cryosphere"
+    ]
+  },
+  "assets": {
+    "thumbnail": {
+      "href": "https://raw.githubusercontent.com/ESA-EarthCODE/polar_hackathon/refs/heads/main/static/polar-cube-viz.jpeg",
+      "type": "image/png",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "reference_1": {
+      "href": "https://esa-earthcode.github.io/polar_hackathon/intro/",
+      "type": "text/html",
+      "title": "EarthCODE Polar Hackathon Datacubes",
+      "roles": [
+        "metadata"
+      ]
+    }
+  }
+}

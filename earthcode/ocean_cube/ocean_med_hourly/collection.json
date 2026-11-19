@@ -1,0 +1,229 @@
+{
+  "type": "Collection",
+  "id": "ocean_med_hourly",
+  "stac_version": "1.1.0",
+  "description": "Hourly ocean surface current datacube for the Mediterranean Sea (1/24 degree resolution, EPSG:4326), including eastward and northward geostrophic, ageostrophic, and total current velocities.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "EarthCODE Catalog"
+    },
+    {
+      "rel": "style",
+      "href": "https://raw.githubusercontent.com/ESA-EarthCODE/earthcode-publishing-catalog/main/assets/geozarr_style.json",
+      "type": "text/zarr-styles",
+      "asset:keys": [
+        "ocean_med_hourly"
+      ]
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "ESA Mediterranean Sea Datacube"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/datacube/v2.2.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "cube:dimensions": {
+    "time": {
+      "type": "temporal",
+      "unit": "hours since 2014-12-30 00:00:00"
+    },
+    "depth": {
+      "type": "vertical",
+      "unit": "m"
+    },
+    "lat": {
+      "type": "spatial",
+      "axis": "y",
+      "extent": [
+        30.250000634939664,
+        46.000001272408966
+      ]
+    },
+    "lon": {
+      "type": "spatial",
+      "axis": "x",
+      "extent": [
+        -6.083331425041402,
+        36.08333333239003
+      ]
+    }
+  },
+  "cube:variables": {
+    "ue_cmems": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "depth",
+        "lat",
+        "lon"
+      ],
+      "unit": "m s-1",
+      "description": "eastward velocity of ageostrophic current"
+    },
+    "ue_woc": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "depth",
+        "lat",
+        "lon"
+      ],
+      "unit": "m s-1",
+      "description": "eastward velocity of ageostrophic current"
+    },
+    "ug_cmems": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "depth",
+        "lat",
+        "lon"
+      ],
+      "unit": "m s-1",
+      "description": "eastward velocity of geostrophic current"
+    },
+    "ut_cmems": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "depth",
+        "lat",
+        "lon"
+      ],
+      "unit": "m s-1",
+      "description": "eastward velocity of total current"
+    },
+    "ut_woc": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "depth",
+        "lat",
+        "lon"
+      ],
+      "unit": "m s-1",
+      "description": "eastward velocity of total current"
+    },
+    "ve_cmems": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "depth",
+        "lat",
+        "lon"
+      ],
+      "unit": "m s-1",
+      "description": "northward velocity of ageostrophic current"
+    },
+    "ve_woc": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "depth",
+        "lat",
+        "lon"
+      ],
+      "unit": "m s-1",
+      "description": "northward velocity of ageostrophic current"
+    },
+    "vg_cmems": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "depth",
+        "lat",
+        "lon"
+      ],
+      "unit": "m s-1",
+      "description": "northward velocity of geostrophic current"
+    },
+    "vt_cmems": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "depth",
+        "lat",
+        "lon"
+      ],
+      "unit": "m s-1",
+      "description": "northward velocity of total current"
+    },
+    "vt_woc": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "depth",
+        "lat",
+        "lon"
+      ],
+      "unit": "m s-1",
+      "description": "northward velocity of total current"
+    },
+    "water_mask": {
+      "type": "data",
+      "dimensions": [
+        "lat",
+        "lon"
+      ],
+      "unit": "1",
+      "description": "ESA WorldCover 2021 v200 water retention mask"
+    }
+  },
+  "subtitle": "Hourly surface currents for the Mediterranean Sea",
+  "themes": [
+    "Oceans"
+  ],
+  "tags": [
+    "ocean",
+    "mediterranean",
+    "hourly",
+    "currents",
+    "geozarr",
+    "datacube"
+  ],
+  "agency": [
+    "ESA"
+  ],
+  "subcode": "OCEAN_MED_HOURLY",
+  "endpointtype": "GeoZarr source",
+  "title": "Mediterranean Ocean Hourly Cube",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -6.083331425041402,
+          30.250000634939664,
+          36.08333333239003,
+          46.000001272408966
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2020-01-01T00:00:00Z",
+          "2020-01-01T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "assets": {
+    "geoparquet": {
+      "href": "./items.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "GeoParquet Items",
+      "file:size": 60768,
+      "roles": [
+        "collection-mirror"
+      ]
+    }
+  }
+}

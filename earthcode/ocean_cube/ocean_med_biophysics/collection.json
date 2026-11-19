@@ -1,0 +1,206 @@
+{
+  "type": "Collection",
+  "id": "ocean_med_biophysics",
+  "stac_version": "1.1.0",
+  "description": "Mediterranean Sea 3D biophysics datacube (1/24 degree resolution, 18 depth levels, EPSG:4326), including temperature, salinity, primary production, mixed layer depth, euphotic depth, and geostrophic velocities.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "EarthCODE Catalog"
+    },
+    {
+      "rel": "style",
+      "href": "https://raw.githubusercontent.com/ESA-EarthCODE/earthcode-publishing-catalog/main/assets/geozarr_style.json",
+      "type": "text/zarr-styles",
+      "asset:keys": [
+        "ocean_med_biophysics"
+      ]
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "ESA Mediterranean Sea Datacube"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/datacube/v2.2.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "cube:dimensions": {
+    "time": {
+      "type": "temporal",
+      "unit": "days since 2016-01-01 00:00:00"
+    },
+    "lat": {
+      "type": "spatial",
+      "axis": "y",
+      "extent": [
+        30.250000634939664,
+        46.000001272408966
+      ]
+    },
+    "lon": {
+      "type": "spatial",
+      "axis": "x",
+      "extent": [
+        -6.083331425041402,
+        36.08333333239003
+      ]
+    },
+    "depth": {
+      "type": "vertical",
+      "unit": "m",
+      "description": "Depth below sea surface"
+    }
+  },
+  "cube:variables": {
+    "mlotst": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "m",
+      "description": "Mixed layer depth from min of temperature and density threshold equivalent to a 0.2C decrease"
+    },
+    "PP": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "depth",
+        "lat",
+        "lon"
+      ],
+      "unit": "mg m-3 d-1",
+      "description": "Primary Production field estimated from chlorophyll and temperature 3D fields [spatial resolution = 1/24 deg]"
+    },
+    "so": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "depth",
+        "lat",
+        "lon"
+      ],
+      "unit": "0.001",
+      "description": "salinity"
+    },
+    "to": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "depth",
+        "lat",
+        "lon"
+      ],
+      "unit": "degrees_C",
+      "description": "temperature"
+    },
+    "ugo": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "depth",
+        "lat",
+        "lon"
+      ],
+      "unit": "m s-1",
+      "description": "geostrophic zonal velocity from thermal wind equation"
+    },
+    "vgo": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "depth",
+        "lat",
+        "lon"
+      ],
+      "unit": "m s-1",
+      "description": "geostrophic meridional velocity from thermal wind equation"
+    },
+    "water_mask": {
+      "type": "data",
+      "dimensions": [
+        "lat",
+        "lon"
+      ],
+      "unit": "1",
+      "description": "ESA WorldCover 2021 v200 water retention mask"
+    },
+    "ZEU": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "m",
+      "description": "Euphotic Depth Estimaded by PP model"
+    },
+    "zo": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "depth",
+        "lat",
+        "lon"
+      ],
+      "unit": "m",
+      "description": "absolute height"
+    }
+  },
+  "subtitle": "3D daily biophysics variables across 18 depth levels",
+  "themes": [
+    "Oceans"
+  ],
+  "tags": [
+    "ocean",
+    "mediterranean",
+    "biophysics",
+    "depth",
+    "geozarr",
+    "datacube"
+  ],
+  "agency": [
+    "ESA"
+  ],
+  "subcode": "OCEAN_MED_BIO",
+  "endpointtype": "GeoZarr source",
+  "title": "Mediterranean Ocean Biophysics Cube",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -6.083331425041402,
+          30.250000634939664,
+          36.08333333239003,
+          46.000001272408966
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2020-01-01T00:00:00Z",
+          "2020-01-01T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "assets": {
+    "geoparquet": {
+      "href": "./items.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "GeoParquet Items",
+      "file:size": 55680,
+      "roles": [
+        "collection-mirror"
+      ]
+    }
+  }
+}

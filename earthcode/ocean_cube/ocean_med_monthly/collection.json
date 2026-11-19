@@ -1,0 +1,1874 @@
+{
+  "type": "Collection",
+  "id": "ocean_med_monthly",
+  "stac_version": "1.1.0",
+  "description": "Monthly ocean datacube for the Mediterranean Sea (1/24 degree resolution, EPSG:4326), covering phytoplankton carbon, marine heatwave, cold spell, acidification, and composite hazard indicators.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "EarthCODE Catalog"
+    },
+    {
+      "rel": "style",
+      "href": "https://raw.githubusercontent.com/ESA-EarthCODE/earthcode-publishing-catalog/main/assets/geozarr_style.json",
+      "type": "text/zarr-styles",
+      "asset:keys": [
+        "ocean_med_monthly"
+      ]
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "ESA Mediterranean Sea Datacube"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/datacube/v2.2.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "cube:dimensions": {
+    "time": {
+      "type": "temporal",
+      "unit": "days since 2016-01-01 00:00:00"
+    },
+    "lat": {
+      "type": "spatial",
+      "axis": "y",
+      "extent": [
+        30.250000634939664,
+        46.000001272408966
+      ]
+    },
+    "lon": {
+      "type": "spatial",
+      "axis": "x",
+      "extent": [
+        -6.083331425041402,
+        36.08333333239003
+      ]
+    }
+  },
+  "cube:variables": {
+    "C_microphyto": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "mg C m-3",
+      "description": "Microphytoplankton Carbon"
+    },
+    "C_nanophyto": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "mg C m-3",
+      "description": "Nanophytoplankton Carbon"
+    },
+    "C_phyto": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "mg C m-3",
+      "description": "Total Phytoplankton Carbon"
+    },
+    "C_picophyto": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "mg C m-3",
+      "description": "Picophytoplankton Carbon"
+    },
+    "CH1_CHI1": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI1 = S_MHW + S_CS + S_PH"
+    },
+    "CH1_CHI1_Cat_high": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CH1_CHI1_Cat high intensity count over the source period"
+    },
+    "CH1_CHI1_Cat_low": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CH1_CHI1_Cat low intensity count over the source period"
+    },
+    "CH1_CHI1_Cat_medium": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CH1_CHI1_Cat medium intensity count over the source period"
+    },
+    "CH1_CHI1_mav": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI1 = S_MHW_mav + S_CS_mav + S_PH_mav"
+    },
+    "CH1_CHI1_mav_Cat_high": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CH1_CHI1_mav_Cat high intensity count over the source period"
+    },
+    "CH1_CHI1_mav_Cat_low": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CH1_CHI1_mav_Cat low intensity count over the source period"
+    },
+    "CH1_CHI1_mav_Cat_medium": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CH1_CHI1_mav_Cat medium intensity count over the source period"
+    },
+    "CH1_CHI1_mav_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "Moving average mean"
+    },
+    "CH1_CHI1_mav_norm": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "Scaled by global max"
+    },
+    "CH1_CHI1_mav_PI": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI1 mav pixel-based counter of events"
+    },
+    "CH1_CHI1_mav_std": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "Moving average std"
+    },
+    "CH1_CHI1_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "Mean over 1993–2022"
+    },
+    "CH1_CHI1_norm": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "Scaled by global max"
+    },
+    "CH1_CHI1_PI": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "Pixel-based counter of CHI1 events"
+    },
+    "CH1_CHI1_std": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "Std over 1993–2022"
+    },
+    "CH1_S_CS": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "Cold Spell Stressor"
+    },
+    "CH1_S_CS_mav": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "Cold Spell Stressor (mav)"
+    },
+    "CH1_S_MHW": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "Marine Heatwave Stressor"
+    },
+    "CH1_S_MHW_mav": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "Marine Heatwave Stressor (mav)"
+    },
+    "CH1_S_PH": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "Ocean Acidification Stressor"
+    },
+    "CH1_S_PH_mav": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "Ocean Acidification Stressor (mav)"
+    },
+    "CH3_CHI3": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI3"
+    },
+    "CH3_CHI3_Cat_high": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CH3_CHI3_Cat high intensity count over the source period"
+    },
+    "CH3_CHI3_Cat_low": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CH3_CHI3_Cat low intensity count over the source period"
+    },
+    "CH3_CHI3_Cat_medium": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CH3_CHI3_Cat medium intensity count over the source period"
+    },
+    "CH3_CHI3_mav": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI3_mav"
+    },
+    "CH3_CHI3_mav_Cat_high": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CH3_CHI3_mav_Cat high intensity count over the source period"
+    },
+    "CH3_CHI3_mav_Cat_low": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CH3_CHI3_mav_Cat low intensity count over the source period"
+    },
+    "CH3_CHI3_mav_Cat_medium": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CH3_CHI3_mav_Cat medium intensity count over the source period"
+    },
+    "CH3_CHI3_mav_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI3_mean"
+    },
+    "CH3_CHI3_mav_norm": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI3_mav_norm"
+    },
+    "CH3_CHI3_mav_PI": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI3_mav_PI"
+    },
+    "CH3_CHI3_mav_std": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI3_std"
+    },
+    "CH3_CHI3_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI3_mean"
+    },
+    "CH3_CHI3_norm": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI3_norm"
+    },
+    "CH3_CHI3_PI": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI3_PI"
+    },
+    "CH3_CHI3_std": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI3_std"
+    },
+    "CH3_S_CS": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_CS"
+    },
+    "CH3_S_CS_mav": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_CS_mav"
+    },
+    "CH3_S_HSSD": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_HSSD"
+    },
+    "CH3_S_HSSD_mav": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_HSSD_mav"
+    },
+    "CH3_S_HSSS": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_HSSS"
+    },
+    "CH3_S_HSSS_mav": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_HSSS_mav"
+    },
+    "CH3_S_HWind": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_HWind"
+    },
+    "CH3_S_HWind_mav": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_HWind_mav"
+    },
+    "CH3_S_LSSD": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_LSSD"
+    },
+    "CH3_S_LSSD_mav": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_LSSD_mav"
+    },
+    "CH3_S_LSSS": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_LSSS"
+    },
+    "CH3_S_LSSS_mav": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_LSSS_mav"
+    },
+    "CH3_S_LWind": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_LWind"
+    },
+    "CH3_S_LWind_mav": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_LWind_mav"
+    },
+    "CH3_S_MHW": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_MHW"
+    },
+    "CH3_S_MHW_mav": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_MHW_mav"
+    },
+    "CH3_S_PH": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_PH"
+    },
+    "CH3_S_PH_mav": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_PH_mav"
+    },
+    "CHI2": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI2 Index"
+    },
+    "CHI2_mav": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI2 moving average"
+    },
+    "CHI2_mav_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI2_mav mean"
+    },
+    "CHI2_mav_norm": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI2_mav normalized (max)"
+    },
+    "CHI2_mav_norm_minmax": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI2_mav normalized (min-max)"
+    },
+    "CHI2_mav_PI": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI2_PI"
+    },
+    "CHI2_mav_std": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI2_mav std"
+    },
+    "CHI2_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI2 mean"
+    },
+    "CHI2_norm": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI2 normalized (max scaling)"
+    },
+    "CHI2_norm_minmax": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI2 normalized (min-max)"
+    },
+    "CHI2_PI": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI2_PI"
+    },
+    "CHI2_std": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI2 std"
+    },
+    "CHI4": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI4 = S_MHW + S_CS + S_FE"
+    },
+    "CHI4_Cat_high": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI4_Cat high intensity count over the source period"
+    },
+    "CHI4_Cat_low": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI4_Cat low intensity count over the source period"
+    },
+    "CHI4_Cat_medium": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI4_Cat medium intensity count over the source period"
+    },
+    "CHI4_mav": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI4_mav = S_MHW_mav + S_CS_mav + S_FE_mav"
+    },
+    "CHI4_mav_Cat_high": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI4_mav_Cat high intensity count over the source period"
+    },
+    "CHI4_mav_Cat_low": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI4_mav_Cat low intensity count over the source period"
+    },
+    "CHI4_mav_Cat_medium": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI4_mav_Cat medium intensity count over the source period"
+    },
+    "CHI4_mav_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI4_mav mean over 2012-2020"
+    },
+    "CHI4_mav_norm": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI4_mav scaled by global max"
+    },
+    "CHI4_mav_PI": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI4 mav pixel-based counter of events"
+    },
+    "CHI4_mav_std": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI4_mav std over 2012-2020"
+    },
+    "CHI4_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI4 mean over 2012–2020"
+    },
+    "CHI4_norm": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI4 scaled by global max"
+    },
+    "CHI4_PI": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI4 pixel-based counter of events"
+    },
+    "CHI4_std": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "CHI4 std over 2012–2020"
+    },
+    "chl_a": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "mg C m-3",
+      "description": "Chlorophyll-a"
+    },
+    "co2": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "umol/kg",
+      "description": "Dissolved carbon dioxide"
+    },
+    "co3": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "umol/kg",
+      "description": "Carbonate ion concentration"
+    },
+    "dfco2": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "uatm",
+      "description": "$\\Delta f\\mathrm{CO} _2$"
+    },
+    "DIATO": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "mg m^-3",
+      "description": "Diatoms chlorophyll a"
+    },
+    "dic": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "umol/kg",
+      "description": "Dissolved inorganic carbon"
+    },
+    "dic_uncert": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "umol/kg",
+      "description": "Dissolved inorganic carbon uncertainty"
+    },
+    "DINO": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "mg m^-3",
+      "description": "Dinoflagellates chlorophyll a"
+    },
+    "EP_Dunne": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "mg C m-2 d-1",
+      "description": "Export Production based on Dunne et al 2005"
+    },
+    "EP_Henson": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "mg C m-2 d-1",
+      "description": "Export Production based on Henson et al  2011"
+    },
+    "EP_Li": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "mg C m-2 d-1",
+      "description": "Export Production based on Li et al 2016"
+    },
+    "fgco2": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "mmolC m-2 day-1",
+      "description": "Sea-air CO$_2$ flux"
+    },
+    "fgco2_oceansoda_8day_fgco2_carbontracker": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "mmol m-2 day-1",
+      "description": "Sea-air carbon dioxide flux from CarbonTracker"
+    },
+    "GREEN": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "mg m^-3",
+      "description": "Chlorophytes (Green algae) chlorophyll a"
+    },
+    "HAPTO": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "mg m^-3",
+      "description": "Haptophytes chlorophyll a"
+    },
+    "hco3": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "umol/kg",
+      "description": "Bicarbonate ion concentration"
+    },
+    "ice": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "fraction",
+      "description": "Sea-ice fraction"
+    },
+    "Kd_blue": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "m^-1",
+      "description": "Monthly mean diffuse attenuation coefficient"
+    },
+    "Kd_UVA": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "m^-1",
+      "description": "Monthly mean diffuse attenuation coefficient"
+    },
+    "Kd_UVAB": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "m^-1",
+      "description": "Monthly mean diffuse attenuation coefficient"
+    },
+    "kw": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "cm hr-1",
+      "description": "Gas transfer velocity of CO$_2$"
+    },
+    "mean_spectral_i_star": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "non-dimensional",
+      "description": "Mean Spectral Nondimensional Irradiance (I*)"
+    },
+    "mld": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "m",
+      "description": "Mixed Layer Depth"
+    },
+    "ohc": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "J m-2",
+      "description": "ocean heat content"
+    },
+    "omega_ar": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "Aragonite saturation state"
+    },
+    "omega_ar_uncert": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "Aragonite saturation state uncertainty"
+    },
+    "omega_ca": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "Calcite saturation state"
+    },
+    "omega_ca_uncert": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "Calcite saturation state uncertainty"
+    },
+    "par": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "mol photons m-2 d-1",
+      "description": "Photosynthetically Active Radiation"
+    },
+    "ph_free": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "1",
+      "description": "Sea-water pH on the free scale"
+    },
+    "ph_total": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "-log([H+])",
+      "description": "Sea-water pH on the total scale"
+    },
+    "ph_total_uncert": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "1",
+      "description": "Sea-water pH uncertainty on the total scale"
+    },
+    "POC": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "mg m^-3",
+      "description": "Particulate Organic Carbon"
+    },
+    "POC_bias": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "mg m^-3",
+      "description": "Bias of log10 transformed Particulate Organic Carbon"
+    },
+    "POC_rmsd": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "mg m^-3",
+      "description": "Root-mean-square-difference of log10 transformed Particulate Organic Carbon"
+    },
+    "pp": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "mg C m-2 d-1",
+      "description": " Phytoplankton Primary Production"
+    },
+    "PROKA": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "mg m^-3",
+      "description": "Prokaryotic phytoplankton chlorophyll a"
+    },
+    "revelle_factor": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "1",
+      "description": "Revelle factor"
+    },
+    "Rrs_490": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "sr-1",
+      "description": "Sea surface reflectance defined as the ratio of water-leaving radiance to surface irradiance at 490 nm."
+    },
+    "Rrs_560": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "sr-1",
+      "description": "Sea surface reflectance defined as the ratio of water-leaving radiance to surface irradiance at 560 nm."
+    },
+    "S_CS": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_CS"
+    },
+    "S_CS_mav": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_CS_mav"
+    },
+    "S_CS_mav_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_CS_mav_mean"
+    },
+    "S_CS_mav_mitho_chi4": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "Cold Spell Stressor (mav)"
+    },
+    "S_CS_mav_std": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_CS_mav_std"
+    },
+    "S_CS_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_CS_mean"
+    },
+    "S_CS_mitho_chi4": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "Cold Spell Stressor"
+    },
+    "S_CS_std": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_CS_std"
+    },
+    "S_DEOX": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_O2"
+    },
+    "S_DEOX_mav": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_O2_mav"
+    },
+    "S_DEOX_mav_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_O2_mav_mean"
+    },
+    "S_DEOX_mav_std": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_O2_mav_std"
+    },
+    "S_DEOX_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_O2_mean"
+    },
+    "S_DEOX_std": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_O2_std"
+    },
+    "S_FE": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "Fishing Effort Stressor"
+    },
+    "S_FE_mav": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "Fishing Effort Stressor (mav)"
+    },
+    "S_HSSS": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_H_SSS"
+    },
+    "S_HSSS_mav": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_H_SSS_mav"
+    },
+    "S_HSSS_mav_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_H_SSS_mav_mean"
+    },
+    "S_HSSS_mav_std": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_H_SSS_mav_std"
+    },
+    "S_HSSS_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_H_SSS_mean"
+    },
+    "S_HSSS_std": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_H_SSS_std"
+    },
+    "S_LSSS": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_L_SSS"
+    },
+    "S_LSSS_mav": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_L_SSS_mav"
+    },
+    "S_LSSS_mav_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_L_SSS_mav_mean"
+    },
+    "S_LSSS_mav_std": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_L_SSS_mav_std"
+    },
+    "S_LSSS_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_L_SSS_mean"
+    },
+    "S_LSSS_std": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_L_SSS_std"
+    },
+    "S_MHW": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_MHW"
+    },
+    "S_MHW_mav": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_MHW_mav"
+    },
+    "S_MHW_mav_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_MHW_mav_mean"
+    },
+    "S_MHW_mav_mitho_chi4": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "Marine Heat Wave Stressor (mav)"
+    },
+    "S_MHW_mav_std": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_MHW_mav_std"
+    },
+    "S_MHW_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_MHW_mean"
+    },
+    "S_MHW_mitho_chi4": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "Marine Heatwave Stressor"
+    },
+    "S_MHW_std": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "dimensionless",
+      "description": "S_MHW_std"
+    },
+    "salinity": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "ppt",
+      "description": "Sea-surface salinity"
+    },
+    "sfco2": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "uatm",
+      "description": "Sea-water carbon dioxide fugacity"
+    },
+    "sfco2_oceansoda_8day_sfco2": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "uatm",
+      "description": "$f\\mathrm{CO} _2^{sea}$"
+    },
+    "sfco2_uncert": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "uatm",
+      "description": "Sea-water carbon dioxide fugacity uncertainty"
+    },
+    "sfco2_uncert_oceansoda_8day_sfco2_uncert": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "uatm",
+      "description": "standard_error_fugacity_of_carbon_dioxide_in_sea_water"
+    },
+    "sol": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "mol L-1 atm-1",
+      "description": "Solubility of CO$_2$ in seawater"
+    },
+    "spco2": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "uatm",
+      "description": "Sea-water carbon dioxide partial pressure"
+    },
+    "spco2_uncert": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "uatm",
+      "description": "Sea-water carbon dioxide partial-pressure uncertainty"
+    },
+    "talk": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "umol/kg",
+      "description": "Total alkalinity"
+    },
+    "talk_uncert": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "umol/kg",
+      "description": "Total alkalinity uncertainty"
+    },
+    "temperature": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "degC",
+      "description": "Sea-surface temperature"
+    },
+    "temperature_oceansoda_8day_temperature": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "degree_C",
+      "description": "SST"
+    },
+    "water_mask": {
+      "type": "data",
+      "dimensions": [
+        "lat",
+        "lon"
+      ],
+      "unit": "1",
+      "description": "ESA WorldCover 2021 v200 water retention mask"
+    }
+  },
+  "subtitle": "Monthly ocean and biogeochemical variables for the Mediterranean Sea",
+  "themes": [
+    "Oceans"
+  ],
+  "tags": [
+    "ocean",
+    "mediterranean",
+    "monthly",
+    "geozarr",
+    "datacube"
+  ],
+  "agency": [
+    "ESA"
+  ],
+  "subcode": "OCEAN_MED_MONTHLY",
+  "endpointtype": "GeoZarr source",
+  "title": "Mediterranean Ocean Monthly Cube",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -6.083331425041402,
+          30.250000634939664,
+          36.08333333239003,
+          46.000001272408966
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2020-01-01T00:00:00Z",
+          "2020-01-01T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "assets": {
+    "geoparquet": {
+      "href": "./items.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "GeoParquet Items",
+      "file:size": 607955,
+      "roles": [
+        "collection-mirror"
+      ]
+    }
+  }
+}

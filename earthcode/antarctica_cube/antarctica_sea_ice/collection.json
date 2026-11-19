@@ -1,0 +1,475 @@
+{
+  "type": "Collection",
+  "id": "antarctica_sea_ice",
+  "stac_version": "1.1.0",
+  "description": "Antarctic Sea-Ice GeoZarr datacube in EPSG:6932 (146 time steps), covering sea-ice floe density, radar freeboard, sea-ice thickness, snow depth, and lead distances.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "EarthCODE Catalog"
+    },
+    {
+      "rel": "style",
+      "href": "https://raw.githubusercontent.com/ESA-EarthCODE/earthcode-publishing-catalog/main/assets/geozarr_style.json",
+      "type": "text/zarr-styles",
+      "asset:keys": [
+        "antarctica_sea_ice"
+      ]
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "ESA Antarctica Datacube"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/datacube/v2.2.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "cube:dimensions": {
+    "time": {
+      "type": "temporal",
+      "unit": "days since 2011-02-01 00:00:00"
+    },
+    "y": {
+      "type": "spatial",
+      "axis": "y",
+      "extent": [
+        -4450000.0,
+        4450000.0
+      ]
+    },
+    "x": {
+      "type": "spatial",
+      "axis": "x",
+      "extent": [
+        -4450000.0,
+        4450000.0
+      ]
+    }
+  },
+  "cube:variables": {
+    "dist_to_closest_lead": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Along-track distance to the closest lead"
+    },
+    "dist_to_closest_lead_20hz_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Mean along-track distance to the closest lead"
+    },
+    "dist_to_closest_open_ocean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Along-track distance to the closest open ocean"
+    },
+    "dist_to_closest_open_ocean_20hz_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Mean along-track distance to the closest open ocean"
+    },
+    "floes_density": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Sea-ice floe density"
+    },
+    "floes_true_density_20hz_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Mean sea-ice floe density"
+    },
+    "floes_valid_density": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Valid sea-ice floe density"
+    },
+    "floes_valid_density_20hz_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Mean valid sea-ice floe density"
+    },
+    "radar_freeboard_20hz_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Mean radar sea-ice freeboard"
+    },
+    "radar_freeboard_20hz_median": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Median radar sea-ice freeboard"
+    },
+    "radar_freeboard_20hz_std": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Radar sea-ice freeboard standard deviation"
+    },
+    "radar_freeboard_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Mean radar sea-ice freeboard"
+    },
+    "radar_freeboard_median": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Median radar sea-ice freeboard"
+    },
+    "radar_freeboard_std": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Radar sea-ice freeboard standard deviation"
+    },
+    "radar_freeboard_unc": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Radar sea-ice freeboard uncertainty"
+    },
+    "radar_freeboard_unc_20hz_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Mean radar sea-ice freeboard uncertainty"
+    },
+    "SAR_mode": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Synthetic aperture radar mode"
+    },
+    "SAR_true_20hz_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Mean synthetic aperture radar mode fraction"
+    },
+    "sea_ice_conc": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "%",
+      "description": "Sea-ice concentration"
+    },
+    "sea_ice_conc_20hz_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "%",
+      "description": "Mean sea-ice concentration"
+    },
+    "sea_ice_type": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Sea-ice type classification"
+    },
+    "sea_ice_type_20hz_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Mean sea-ice type classification"
+    },
+    "SIT_ASD_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Mean sea-ice thickness using Altimetric Snow Depth"
+    },
+    "SIT_ASD_median": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Median sea-ice thickness using Altimetric Snow Depth"
+    },
+    "sit_sd_ASD_sh_radar_freeboard_20hz_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Mean sea-ice thickness using Altimetric Snow Depth and radar freeboard"
+    },
+    "sit_sd_ASD_sh_radar_freeboard_20hz_median": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Median sea-ice thickness using Altimetric Snow Depth and radar freeboard"
+    },
+    "sla_smooth": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Smoothed sea-surface height anomaly"
+    },
+    "sla_smooth_20hz_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Mean smoothed sea-surface height anomaly"
+    },
+    "sla_smooth_20hz_std": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Smoothed sea-surface height anomaly standard deviation"
+    },
+    "sla_smooth_std": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Smoothed sea-surface height anomaly standard deviation"
+    },
+    "sla_smooth_unc": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Smoothed sea-surface height anomaly uncertainty"
+    },
+    "sla_unc_20hz_mean": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Mean sea-surface height anomaly uncertainty"
+    },
+    "snow_depth_ASD": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Snow depth from the Altimetric Snow Depth solution"
+    },
+    "snow_depth_sd_ASD_sh": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "Snow depth from the Altimetric Snow Depth solution"
+    },
+    "sss": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Sea Surface Salinity"
+    },
+    "uncertainty_sss": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Sea Surface Salinity Uncertainty"
+    }
+  },
+  "subtitle": "Antarctic sea-ice thickness, freeboard, floe density, and snow depth",
+  "themes": [
+    "Cryosphere"
+  ],
+  "tags": [
+    "antarctica",
+    "sea-ice",
+    "freeboard",
+    "geozarr",
+    "datacube"
+  ],
+  "agency": [
+    "ESA"
+  ],
+  "subcode": "ANTARCTICA_SEA_ICE",
+  "eodash:proj4_def": {
+    "name": "EPSG:6932",
+    "def": "+proj=laea +lat_0=-90 +lon_0=0 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs +type=crs",
+    "bounds": [
+      -4450000,
+      -4450000,
+      4450000,
+      4450000
+    ]
+  },
+  "endpointtype": "GeoZarr source",
+  "title": "Antarctic Sea-Ice Cube",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -90.0,
+          180.0,
+          -50.0
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2020-01-01T00:00:00Z",
+          "2020-01-01T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "assets": {
+    "geoparquet": {
+      "href": "./items.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "GeoParquet Items",
+      "file:size": 149460,
+      "roles": [
+        "collection-mirror"
+      ]
+    }
+  }
+}

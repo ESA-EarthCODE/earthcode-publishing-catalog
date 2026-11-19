@@ -1,0 +1,136 @@
+{
+  "type": "Collection",
+  "id": "antarctica_ice_temp",
+  "stac_version": "1.1.0",
+  "description": "Antarctic Land-Ice Internal Temperature GeoZarr datacube in EPSG:3031 with 91 depth levels below the ice sheet surface and retrieval quality flags.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "EarthCODE Catalog"
+    },
+    {
+      "rel": "style",
+      "href": "https://raw.githubusercontent.com/ESA-EarthCODE/earthcode-publishing-catalog/main/assets/geozarr_style.json",
+      "type": "text/zarr-styles",
+      "asset:keys": [
+        "antarctica_ice_temp"
+      ]
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "ESA Antarctica Datacube"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/datacube/v2.2.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "cube:dimensions": {
+    "y": {
+      "type": "spatial",
+      "axis": "y",
+      "extent": [
+        -2457900.0,
+        2457900.0
+      ]
+    },
+    "x": {
+      "type": "spatial",
+      "axis": "x",
+      "extent": [
+        -2867900.0,
+        2867900.0
+      ]
+    },
+    "depth": {
+      "type": "vertical",
+      "unit": "m",
+      "description": "Depth below the ice sheet surface"
+    }
+  },
+  "cube:variables": {
+    "QualityFlag": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x"
+      ],
+      "unit": "1",
+      "description": "Ice Temperature Retrieval Quality Flag"
+    },
+    "Tice": {
+      "type": "data",
+      "dimensions": [
+        "y",
+        "x",
+        "depth"
+      ],
+      "unit": "K",
+      "description": "Antarctic Land-Ice Internal Temperature"
+    }
+  },
+  "subtitle": "3D Antarctic ice sheet internal temperature across 91 depth levels",
+  "themes": [
+    "Cryosphere"
+  ],
+  "tags": [
+    "antarctica",
+    "land-ice",
+    "temperature",
+    "depth",
+    "geozarr",
+    "datacube"
+  ],
+  "agency": [
+    "ESA"
+  ],
+  "subcode": "ANTARCTICA_ICE_TEMP",
+  "eodash:proj4_def": {
+    "name": "EPSG:3031",
+    "def": "+proj=stere +lat_0=-90 +lat_ts=-71 +lon_0=0 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs +type=crs",
+    "bounds": [
+      -3299207.53,
+      -3333134.03,
+      3299207.53,
+      3333134.03
+    ]
+  },
+  "endpointtype": "GeoZarr source",
+  "title": "Antarctic Land-Ice Internal Temperature Cube",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -90.0,
+          180.0,
+          -60.0
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2020-01-01T00:00:00Z",
+          "2020-01-01T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "assets": {
+    "geoparquet": {
+      "href": "./items.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "GeoParquet Items",
+      "file:size": 33012,
+      "roles": [
+        "collection-mirror"
+      ]
+    }
+  }
+}
