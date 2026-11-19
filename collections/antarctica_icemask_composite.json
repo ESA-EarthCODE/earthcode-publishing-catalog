@@ -1,0 +1,34 @@
+{
+  "Name": "antarctica_icemask_composite",
+  "Title": "Composite Antarctic Ice Mask (1997-2021)",
+  "EodashIdentifier": "ANTARCTICA_ICEMASK",
+  "Subtitle": "Multi-temporal composite Antarctic ice-front mask",
+  "Description": "Composite Antarctic Ice Mask GeoZarr datacube (1997-2021, 24 time steps) in EPSG:3031.",
+  "Themes": ["Cryosphere"],
+  "Tags": ["antarctica", "land-ice", "icemask", "geozarr", "datacube"],
+  "Agency": ["ESA"],
+  "Resources": [
+    {
+      "Name": "GeoZarr source",
+      "Style": "geozarr_style.json",
+      "Bbox": [-180.0, -90.0, 180.0, -60.0],
+      "DataProjection": {
+        "name": "EPSG:3031",
+        "def": "+proj=stere +lat_0=-90 +lat_ts=-71 +lon_0=0 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs +type=crs",
+        "bounds": [-3299207.53, -3333134.03, 3299207.53, 3333134.03]
+      },
+      "TimeEntries": [
+        {
+          "Time": "2020-01-01T00:00:00Z",
+          "Assets": [
+            {
+              "Identifier": "antarctica_icemask_composite",
+              "Title": "Composite Ice Mask Cube",
+              "File": "https://s3.waw4-1.cloudferro.com/EarthCODE/OSCAssets/antarctica_cube/land-ice/icemask_composite.zarr"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
