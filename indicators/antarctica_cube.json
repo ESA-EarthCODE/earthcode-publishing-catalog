@@ -1,10 +1,8 @@
 {
   "Name": "antarctica_cube",
-  "Title": "Polar / Antarctica Datacubes",
-  "EodashIdentifier": "ANTARCTICA_CUBE",
-  "Subtitle": "Antarctic land-ice and sea-ice GeoZarr datacubes",
+  "Title": "ESA Antarctica Datacube",
   "Description": "Collection of Antarctic land-ice and sea-ice GeoZarr datacubes from the EarthCODE Polar Hackathon, including internal ice temperature, surface elevation change, combined bed/ice properties, composite ice mask, surface velocity, and sea-ice properties.",
-  "Themes": ["Cryosphere"],
+  "Themes": ["cryosphere"],
   "Tags": ["antarctica", "polar", "land-ice", "sea-ice", "geozarr", "datacube"],
   "Agency": ["ESA"],
   "MapProjection": {
@@ -12,6 +10,7 @@
     "def": "+proj=stere +lat_0=-90 +lat_ts=-71 +lon_0=0 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs +type=crs",
     "bounds": [-3299207.53, -3333134.03, 3299207.53, 3333134.03]
   },
+  "Image": "https://raw.githubusercontent.com/ESA-EarthCODE/polar_hackathon/refs/heads/main/static/polar-cube-viz.jpeg",
   "References": [
     {
       "Name": "EarthCODE Polar Hackathon Datacubes",
@@ -21,7 +20,14 @@
   "Collections": [
     "antarctica_ice_temp",
     "antarctica_sec",
-    "antarctica_combined",
+    "antarctica_icemask_composite",
+    "antarctica_ice_velocity",
+    "antarctica_sea_ice",
+    "antarctica_combined"
+  ],
+  "Disable": [
+    "antarctica_ice_temp",
+    "antarctica_sec",
     "antarctica_icemask_composite",
     "antarctica_ice_velocity",
     "antarctica_sea_ice"

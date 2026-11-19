@@ -1,12 +1,11 @@
 {
   "Name": "ocean_cube",
-  "Title": "Mediterranean Ocean Datacubes",
-  "EodashIdentifier": "OCEAN_CUBE",
-  "Subtitle": "Multi-temporal Mediterranean Sea GeoZarr datacubes",
+  "Title": "ESA Mediterranean Sea Datacube",
   "Description": "Collection of Mediterranean Sea GeoZarr datacubes from the EarthCODE Ocean Hackathon, covering daily surface variables, monthly biogeochemistry, 3D biophysics with depth levels, and hourly surface currents.",
-  "Themes": ["Oceans"],
+  "Themes": ["oceans"],
   "Tags": ["ocean", "mediterranean", "geozarr", "datacube"],
   "Agency": ["ESA"],
+  "Image": "ocean-cube-thumbnail.png",
   "References": [
     {
       "Name": "EarthCODE Ocean Hackathon Datacubes",
@@ -15,6 +14,11 @@
   ],
   "Collections": [
     "ocean_med_daily_surface",
+    "ocean_med_monthly",
+    "ocean_med_biophysics",
+    "ocean_med_hourly"
+  ],
+  "Disable": [
     "ocean_med_monthly",
     "ocean_med_biophysics",
     "ocean_med_hourly"
