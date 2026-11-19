@@ -1,0 +1,29 @@
+{
+  "Name": "ocean_med_monthly",
+  "Title": "Mediterranean Ocean Monthly Cube",
+  "EodashIdentifier": "OCEAN_MED_MONTHLY",
+  "Subtitle": "Monthly ocean and biogeochemical variables for the Mediterranean Sea",
+  "Description": "Monthly ocean datacube for the Mediterranean Sea (1/24 degree resolution, EPSG:4326), covering phytoplankton carbon, marine heatwave, cold spell, acidification, and composite hazard indicators.",
+  "Themes": ["Oceans"],
+  "Tags": ["ocean", "mediterranean", "monthly", "geozarr", "datacube"],
+  "Agency": ["ESA"],
+  "Resources": [
+    {
+      "Name": "GeoZarr source",
+      "Style": "geozarr_style.json",
+      "Bbox": [-6.083331425041402, 30.250000634939664, 36.08333333239003, 46.000001272408966],
+      "TimeEntries": [
+        {
+          "Time": "2020-01-01T00:00:00Z",
+          "Assets": [
+            {
+              "Identifier": "ocean_med_monthly",
+              "Title": "Monthly Cube",
+              "File": "https://s3.waw4-1.cloudferro.com/EarthCODE/OSCAssets/med_cubes/ocean-med-monthly-cube.zarr"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

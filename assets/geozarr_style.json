@@ -1,0 +1,38 @@
+{
+  "variables": {
+    "min": 0,
+    "max": 1
+  },
+  "color": [
+    "interpolate",
+    ["linear"],
+    ["band", 1],
+    ["var", "min"],
+    ["color", 68, 1, 84, ["band", 2]],
+    ["+", ["var", "min"], ["*", ["-", ["var", "max"], ["var", "min"]], 0.25]],
+    ["color", 59, 82, 139, ["band", 2]],
+    ["+", ["var", "min"], ["*", ["-", ["var", "max"], ["var", "min"]], 0.5]],
+    ["color", 33, 145, 140, ["band", 2]],
+    ["+", ["var", "min"], ["*", ["-", ["var", "max"], ["var", "min"]], 0.75]],
+    ["color", 94, 201, 98, ["band", 2]],
+    ["var", "max"],
+    ["color", 253, 231, 37, ["band", 2]]
+  ],
+  "legend": {
+    "title": "Value",
+    "range": [
+      "rgba(68, 1, 84, 1)",
+      "rgba(59, 82, 139, 1)",
+      "rgba(33, 145, 140, 1)",
+      "rgba(94, 201, 98, 1)",
+      "rgba(253, 231, 37, 1)"
+    ],
+    "domainProperties": ["min", "max"]
+  },
+  "jsonform": {
+    "type": "object",
+    "title": "Visualization Settings",
+    "autofill": true,
+    "properties": {}
+  }
+}

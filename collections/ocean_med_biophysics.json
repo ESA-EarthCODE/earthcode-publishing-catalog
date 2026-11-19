@@ -1,0 +1,29 @@
+{
+  "Name": "ocean_med_biophysics",
+  "Title": "Mediterranean Ocean Biophysics Cube",
+  "EodashIdentifier": "OCEAN_MED_BIO",
+  "Subtitle": "3D daily biophysics variables across 18 depth levels",
+  "Description": "Mediterranean Sea 3D biophysics datacube (1/24 degree resolution, 18 depth levels, EPSG:4326), including temperature, salinity, primary production, mixed layer depth, euphotic depth, and geostrophic velocities.",
+  "Themes": ["Oceans"],
+  "Tags": ["ocean", "mediterranean", "biophysics", "depth", "geozarr", "datacube"],
+  "Agency": ["ESA"],
+  "Resources": [
+    {
+      "Name": "GeoZarr source",
+      "Style": "geozarr_style.json",
+      "Bbox": [-6.083331425041402, 30.250000634939664, 36.08333333239003, 46.000001272408966],
+      "TimeEntries": [
+        {
+          "Time": "2020-01-01T00:00:00Z",
+          "Assets": [
+            {
+              "Identifier": "ocean_med_biophysics",
+              "Title": "Biophysics Cube",
+              "File": "https://s3.waw4-1.cloudferro.com/EarthCODE/OSCAssets/med_cubes/ocean-med-biophysics.zarr"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

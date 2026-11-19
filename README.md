@@ -4,7 +4,7 @@ Catalog configuration point for ESA-EarthCODE Publishing Dashboard.
 
 Catalog is available under:
 
-[https://ESA-EarthCODE.github.io/earthcode-publishing-catalog/catalog.json](https://ESA-EarthCODE.github.io/earthcode-publishing-catalog/catalog.json)
+[https://ESA-EarthCODE.github.io/earthcode-publishing-catalog/catalog.json](https://ESA-EarthCODE.github.io/earthcode-publishing-catalog/earthcode/catalog.json)
 
 Using STAC browser, e.g.:
 

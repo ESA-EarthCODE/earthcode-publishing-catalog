@@ -1,0 +1,29 @@
+{
+  "Name": "ocean_med_hourly",
+  "Title": "Mediterranean Ocean Hourly Cube",
+  "EodashIdentifier": "OCEAN_MED_HOURLY",
+  "Subtitle": "Hourly surface currents for the Mediterranean Sea",
+  "Description": "Hourly ocean surface current datacube for the Mediterranean Sea (1/24 degree resolution, EPSG:4326), including eastward and northward geostrophic, ageostrophic, and total current velocities.",
+  "Themes": ["Oceans"],
+  "Tags": ["ocean", "mediterranean", "hourly", "currents", "geozarr", "datacube"],
+  "Agency": ["ESA"],
+  "Resources": [
+    {
+      "Name": "GeoZarr source",
+      "Style": "geozarr_style.json",
+      "Bbox": [-6.083331425041402, 30.250000634939664, 36.08333333239003, 46.000001272408966],
+      "TimeEntries": [
+        {
+          "Time": "2020-01-01T00:00:00Z",
+          "Assets": [
+            {
+              "Identifier": "ocean_med_hourly",
+              "Title": "Hourly Currents Cube",
+              "File": "https://s3.waw4-1.cloudferro.com/EarthCODE/OSCAssets/med_cubes/hourly_cube.zarr"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
