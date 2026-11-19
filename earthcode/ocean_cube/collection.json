@@ -12,30 +12,6 @@
     },
     {
       "rel": "child",
-      "href": "./ocean_med_daily_surface/collection.json",
-      "type": "application/json",
-      "title": "Mediterranean Ocean Daily Surface Cube",
-      "endpointtype": "GeoZarr source",
-      "subtitle": "Daily surface ocean variables for the Mediterranean Sea",
-      "code": "OCEAN_MED_DAILY",
-      "id": "ocean_med_daily_surface",
-      "themes": [
-        "Oceans"
-      ],
-      "tags": [
-        "ocean",
-        "mediterranean",
-        "daily",
-        "geozarr",
-        "datacube"
-      ],
-      "agency": [
-        "ESA"
-      ],
-      "subcode": "OCEAN_MED_DAILY"
-    },
-    {
-      "rel": "child",
       "href": "./ocean_med_monthly/collection.json",
       "type": "application/json",
       "title": "Mediterranean Ocean Monthly Cube",
@@ -116,6 +92,30 @@
         "ESA"
       ],
       "subcode": "OCEAN_MED_HOURLY"
+    },
+    {
+      "rel": "child",
+      "href": "./ocean_med_daily_surface/collection.json",
+      "type": "application/json",
+      "title": "Mediterranean Ocean Daily Surface Cube",
+      "endpointtype": "GeoZarr source",
+      "subtitle": "Daily surface ocean variables for the Mediterranean Sea",
+      "code": "OCEAN_MED_DAILY",
+      "id": "ocean_med_daily_surface",
+      "themes": [
+        "Oceans"
+      ],
+      "tags": [
+        "ocean",
+        "mediterranean",
+        "daily",
+        "geozarr",
+        "datacube"
+      ],
+      "agency": [
+        "ESA"
+      ],
+      "subcode": "OCEAN_MED_DAILY"
     },
     {
       "rel": "xyz",
@@ -209,10 +209,10 @@
   "license": "other",
   "summaries": {
     "subcode": [
-      "OCEAN_MED_MONTHLY",
+      "OCEAN_MED_DAILY",
       "OCEAN_MED_BIO",
-      "OCEAN_MED_HOURLY",
-      "OCEAN_MED_DAILY"
+      "OCEAN_MED_MONTHLY",
+      "OCEAN_MED_HOURLY"
     ],
     "themes": [
       "Oceans"

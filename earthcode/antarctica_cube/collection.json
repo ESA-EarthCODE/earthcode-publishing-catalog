@@ -300,10 +300,10 @@
   "summaries": {
     "subcode": [
       "ANTARCTICA_COMBINED",
-      "ANTARCTICA_ICE_TEMP",
-      "ANTARCTICA_ICE_VELOCITY",
       "ANTARCTICA_SEC",
       "ANTARCTICA_SEA_ICE",
+      "ANTARCTICA_ICE_TEMP",
+      "ANTARCTICA_ICE_VELOCITY",
       "ANTARCTICA_ICEMASK"
     ],
     "themes": [
