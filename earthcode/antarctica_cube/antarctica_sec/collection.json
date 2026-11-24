@@ -48,7 +48,11 @@
     },
     "time": {
       "type": "temporal",
-      "unit": "days since 1993-12-01 00:00:00"
+      "unit": "days since 1993-12-01 00:00:00",
+      "extent": [
+        "1993-12-01T00:00:00Z",
+        "2020-01-01T00:00:00Z"
+      ]
     }
   },
   "cube:variables": {
@@ -163,7 +167,7 @@
     "temporal": {
       "interval": [
         [
-          "2020-01-01T00:00:00Z",
+          "1993-12-01T00:00:00Z",
           "2020-01-01T00:00:00Z"
         ]
       ]
@@ -175,7 +179,7 @@
       "href": "./items.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "GeoParquet Items",
-      "file:size": 49549,
+      "file:size": 50602,
       "roles": [
         "collection-mirror"
       ]

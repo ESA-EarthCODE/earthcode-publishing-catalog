@@ -32,7 +32,11 @@
   "cube:dimensions": {
     "time": {
       "type": "temporal",
-      "unit": "days since 2014-10-01 00:00:00"
+      "unit": "days since 2014-10-01 00:00:00",
+      "extent": [
+        "2014-10-01T00:00:00Z",
+        "2021-12-01T00:00:00Z"
+      ]
     },
     "y": {
       "type": "spatial",
@@ -164,8 +168,8 @@
     "temporal": {
       "interval": [
         [
-          "2020-01-01T00:00:00Z",
-          "2020-01-01T00:00:00Z"
+          "2014-10-01T00:00:00Z",
+          "2021-12-01T00:00:00Z"
         ]
       ]
     }
@@ -176,7 +180,7 @@
       "href": "./items.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "GeoParquet Items",
-      "file:size": 51807,
+      "file:size": 52865,
       "roles": [
         "collection-mirror"
       ]

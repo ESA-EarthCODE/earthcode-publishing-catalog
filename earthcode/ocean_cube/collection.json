@@ -200,8 +200,8 @@
     "temporal": {
       "interval": [
         [
-          "2020-01-01T00:00:00Z",
-          "2020-01-01T00:00:00Z"
+          "2014-12-30T00:00:00Z",
+          "2022-12-31T00:00:00Z"
         ]
       ]
     }
@@ -210,8 +210,8 @@
   "summaries": {
     "subcode": [
       "OCEAN_MED_DAILY",
-      "OCEAN_MED_BIO",
       "OCEAN_MED_MONTHLY",
+      "OCEAN_MED_BIO",
       "OCEAN_MED_HOURLY"
     ],
     "themes": [

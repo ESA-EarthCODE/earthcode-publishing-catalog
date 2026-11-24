@@ -290,8 +290,8 @@
     "temporal": {
       "interval": [
         [
-          "2020-01-01T00:00:00Z",
-          "2020-01-01T00:00:00Z"
+          "1993-12-01T00:00:00Z",
+          "2023-03-01T00:00:00Z"
         ]
       ]
     }
@@ -299,12 +299,12 @@
   "license": "other",
   "summaries": {
     "subcode": [
-      "ANTARCTICA_COMBINED",
-      "ANTARCTICA_SEC",
-      "ANTARCTICA_SEA_ICE",
       "ANTARCTICA_ICE_TEMP",
+      "ANTARCTICA_SEC",
+      "ANTARCTICA_ICEMASK",
+      "ANTARCTICA_SEA_ICE",
       "ANTARCTICA_ICE_VELOCITY",
-      "ANTARCTICA_ICEMASK"
+      "ANTARCTICA_COMBINED"
     ],
     "themes": [
       "Cryosphere"
