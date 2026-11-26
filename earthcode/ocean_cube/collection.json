@@ -2,7 +2,7 @@
   "type": "Collection",
   "id": "ocean_cube",
   "stac_version": "1.1.0",
-  "description": "Collection of Mediterranean Sea GeoZarr datacubes from the EarthCODE Ocean Hackathon, covering daily surface variables, monthly biogeochemistry, 3D biophysics with depth levels, and hourly surface currents.",
+  "description": "The ESA Mediterranean Sea Datacube brings together selected marine datasets. All gridded variables share a common 1/24° EPSG:4326 grid. Variables such as chlorophyll concentration, surface currents and sea-surface temperature are represented across the Mediterranean Sea data.",
   "links": [
     {
       "rel": "root",
@@ -209,10 +209,10 @@
   "license": "other",
   "summaries": {
     "subcode": [
-      "OCEAN_MED_DAILY",
-      "OCEAN_MED_MONTHLY",
       "OCEAN_MED_BIO",
-      "OCEAN_MED_HOURLY"
+      "OCEAN_MED_HOURLY",
+      "OCEAN_MED_MONTHLY",
+      "OCEAN_MED_DAILY"
     ],
     "themes": [
       "Oceans"
@@ -227,6 +227,14 @@
       ]
     },
     "reference_1": {
+      "href": "https://osc.earthcode.eox.at/data-collections/mediterranean-sea/collection",
+      "type": "text/html",
+      "title": "OSC - Mediterranean Sea Datacube",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "reference_2": {
       "href": "https://esa-earthcode.github.io/ocean_hackathon/datacube/intro/",
       "type": "text/html",
       "title": "EarthCODE Ocean Hackathon Datacubes",

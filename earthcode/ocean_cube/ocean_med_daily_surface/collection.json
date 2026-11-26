@@ -116,6 +116,86 @@
       "unit": "1/days",
       "description": "backward Finite Size Lyapunov Exponents"
     },
+    "hs_most_likely_interburst": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "m",
+      "description": "Most likely significant wave height"
+    },
+    "hs_most_likely_intraburst": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "m",
+      "description": "Most likely significant wave height"
+    },
+    "mld_morlenn_assim": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "m",
+      "description": "UpperDyn inferred mixed layer depth"
+    },
+    "mld_morlenn_baseline": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "m",
+      "description": "UpperDyn inferred mixed layer depth"
+    },
+    "n2_max_morlenn_assim": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "s-2",
+      "description": "UpperDyn inferred N2"
+    },
+    "n2_max_morlenn_baseline": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "s-2",
+      "description": "UpperDyn inferred N2"
+    },
+    "phs0_most_likely_interburst": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "m",
+      "description": "Most likely wind sea significant wave height"
+    },
+    "phs0_most_likely_intraburst": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "m",
+      "description": "Most likely wind sea significant wave height"
+    },
     "relative_vorticity_4dvarnet": {
       "type": "data",
       "dimensions": [
@@ -185,6 +265,26 @@
       ],
       "unit": "1",
       "description": "extreme_event_category"
+    },
+    "t0m1_most_likely_interburst": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "s",
+      "description": "Most likely mean wave period"
+    },
+    "t0m1_most_likely_intraburst": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "s",
+      "description": "Most likely mean wave period"
     },
     "ugos_4dvarnet": {
       "type": "data",
@@ -319,7 +419,7 @@
       "href": "./items.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "GeoParquet Items",
-      "file:size": 97929,
+      "file:size": 132540,
       "roles": [
         "collection-mirror"
       ]

@@ -56,6 +56,36 @@
     }
   },
   "cube:variables": {
+    "booms_t1_owt_class": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "1",
+      "description": "BOOMS T1 dominant optical water type"
+    },
+    "booms_t2_biophysical_class": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "1",
+      "description": "BOOMS T2 biophysical seascape class"
+    },
+    "booms_t3_atlantic_surface_class": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "1",
+      "description": "BOOMS T3 Atlantic surface seascape class"
+    },
     "C_microphyto": {
       "type": "data",
       "dimensions": [
@@ -95,6 +125,26 @@
       ],
       "unit": "mg C m-3",
       "description": "Picophytoplankton Carbon"
+    },
+    "cbc_carbon_stock_density": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "Mg ha-1",
+      "description": "Mean blue carbon stock density over mapped habitat"
+    },
+    "cbc_habitat_presence": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "1",
+      "description": "Mapped Posidonia habitat presence"
     },
     "CH1_CHI1": {
       "type": "data",
@@ -966,6 +1016,16 @@
       "unit": "umol/kg",
       "description": "Carbonate ion concentration"
     },
+    "confidence_score": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "1",
+      "description": "Mean Posidonia classification confidence"
+    },
     "dfco2": {
       "type": "data",
       "dimensions": [
@@ -1145,6 +1205,16 @@
       ],
       "unit": "cm hr-1",
       "description": "Gas transfer velocity of CO$_2$"
+    },
+    "majority_pct": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "lat",
+        "lon"
+      ],
+      "unit": "%",
+      "description": "Mean Posidonia majority percentage"
     },
     "mean_spectral_i_star": {
       "type": "data",
@@ -1869,7 +1939,7 @@
       "href": "./items.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "GeoParquet Items",
-      "file:size": 609012,
+      "file:size": 633442,
       "roles": [
         "collection-mirror"
       ]

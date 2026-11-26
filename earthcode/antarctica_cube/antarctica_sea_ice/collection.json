@@ -256,6 +256,66 @@
       "unit": "%",
       "description": "Mean sea-ice concentration"
     },
+    "sea_ice_thickness_so_simba_cdr_cryosat2": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "thickness of the sea ice layer"
+    },
+    "sea_ice_thickness_so_simba_cdr_envisat": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "thickness of the sea ice layer"
+    },
+    "sea_ice_thickness_so_simba_mms_sit": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "thickness of the sea ice layer"
+    },
+    "sea_ice_thickness_unc_so_simba_cdr_cryosat2": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "combined sea ice thickness uncertainty"
+    },
+    "sea_ice_thickness_unc_so_simba_cdr_envisat": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "combined sea ice thickness uncertainty"
+    },
+    "sea_ice_thickness_unc_so_simba_mms_sit": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "combined sea ice thickness uncertainty"
+    },
     "sea_ice_type": {
       "type": "data",
       "dimensions": [
@@ -396,6 +456,26 @@
       "unit": "m",
       "description": "Snow depth from the Altimetric Snow Depth solution"
     },
+    "snow_depth_so_simba_mms_sd": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "thickness of the snow layer"
+    },
+    "snow_depth_unc_so_simba_mms_sd": {
+      "type": "data",
+      "dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "unit": "m",
+      "description": "uncertainty thickness of the snow layer"
+    },
     "sss": {
       "type": "data",
       "dimensions": [
@@ -470,7 +550,7 @@
       "href": "./items.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "GeoParquet Items",
-      "file:size": 150520,
+      "file:size": 179238,
       "roles": [
         "collection-mirror"
       ]

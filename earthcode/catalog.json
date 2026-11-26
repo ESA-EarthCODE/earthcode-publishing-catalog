@@ -20,10 +20,10 @@
         "oceans"
       ],
       "subcode": [
-        "OCEAN_MED_DAILY",
-        "OCEAN_MED_MONTHLY",
         "OCEAN_MED_BIO",
-        "OCEAN_MED_HOURLY"
+        "OCEAN_MED_HOURLY",
+        "OCEAN_MED_MONTHLY",
+        "OCEAN_MED_DAILY"
       ],
       "thumbnail": [
         "https://raw.githubusercontent.com/ESA-EarthCODE/earthcode-publishing-catalog/main/assets/ocean-cube-thumbnail.png"
@@ -48,12 +48,12 @@
         "cryosphere"
       ],
       "subcode": [
+        "ANTARCTICA_ICE_VELOCITY",
+        "ANTARCTICA_COMBINED",
+        "ANTARCTICA_ICEMASK",
         "ANTARCTICA_ICE_TEMP",
         "ANTARCTICA_SEC",
-        "ANTARCTICA_ICEMASK",
-        "ANTARCTICA_SEA_ICE",
-        "ANTARCTICA_ICE_VELOCITY",
-        "ANTARCTICA_COMBINED"
+        "ANTARCTICA_SEA_ICE"
       ],
       "thumbnail": [
         "https://raw.githubusercontent.com/ESA-EarthCODE/polar_hackathon/refs/heads/main/static/polar-cube-viz.jpeg"

@@ -2,7 +2,7 @@
   "type": "Collection",
   "id": "antarctica_cube",
   "stac_version": "1.1.0",
-  "description": "Collection of Antarctic land-ice and sea-ice GeoZarr datacubes from the EarthCODE Polar Hackathon, including internal ice temperature, surface elevation change, combined bed/ice properties, composite ice mask, surface velocity, and sea-ice properties.",
+  "description": "The ESA Antarctica Land-Ice Datacube brings together selected land-ice datasets. All gridded variables share a common 100 m EPSG:3031 grid. Variables such as ice velocity, ice temperature and glacier elevation are represented across Antarctica.\nFor the ESA Antarctic Sea-Ice Datacube All gridded variables share a common 12.5 km EPSG:6932 grid. Variables such as ice thickness and snow depth are represented across Antarctica.",
   "links": [
     {
       "rel": "root",
@@ -299,12 +299,12 @@
   "license": "other",
   "summaries": {
     "subcode": [
+      "ANTARCTICA_ICE_VELOCITY",
+      "ANTARCTICA_COMBINED",
+      "ANTARCTICA_ICEMASK",
       "ANTARCTICA_ICE_TEMP",
       "ANTARCTICA_SEC",
-      "ANTARCTICA_ICEMASK",
-      "ANTARCTICA_SEA_ICE",
-      "ANTARCTICA_ICE_VELOCITY",
-      "ANTARCTICA_COMBINED"
+      "ANTARCTICA_SEA_ICE"
     ],
     "themes": [
       "Cryosphere"
@@ -319,9 +319,25 @@
       ]
     },
     "reference_1": {
+      "href": "https://osc.earthcode.eox.at/data-collections/antarctic-land/collection",
+      "type": "text/html",
+      "title": "OSC - Antarctic Land-Ice Datacube",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "reference_2": {
+      "href": "https://osc.earthcode.eox.at/data-collections/antarctic-sea/collection",
+      "type": "text/html",
+      "title": "OSC - Antarctic Sea-Ice Datacube",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "reference_3": {
       "href": "https://esa-earthcode.github.io/polar_hackathon/intro/",
       "type": "text/html",
-      "title": "EarthCODE Polar Hackathon Datacubes",
+      "title": "EarthCODE Polar Hackathon Notebooks",
       "roles": [
         "metadata"
       ]
