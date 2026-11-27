@@ -299,12 +299,12 @@
   "license": "other",
   "summaries": {
     "subcode": [
-      "ANTARCTICA_ICE_VELOCITY",
-      "ANTARCTICA_COMBINED",
-      "ANTARCTICA_ICEMASK",
-      "ANTARCTICA_ICE_TEMP",
       "ANTARCTICA_SEC",
-      "ANTARCTICA_SEA_ICE"
+      "ANTARCTICA_ICE_TEMP",
+      "ANTARCTICA_SEA_ICE",
+      "ANTARCTICA_COMBINED",
+      "ANTARCTICA_ICE_VELOCITY",
+      "ANTARCTICA_ICEMASK"
     ],
     "themes": [
       "Cryosphere"

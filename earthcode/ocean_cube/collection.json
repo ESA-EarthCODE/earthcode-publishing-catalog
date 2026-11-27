@@ -209,10 +209,10 @@
   "license": "other",
   "summaries": {
     "subcode": [
-      "OCEAN_MED_BIO",
       "OCEAN_MED_HOURLY",
       "OCEAN_MED_MONTHLY",
-      "OCEAN_MED_DAILY"
+      "OCEAN_MED_DAILY",
+      "OCEAN_MED_BIO"
     ],
     "themes": [
       "Oceans"
